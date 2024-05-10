@@ -55,13 +55,13 @@ def timeit(func, *args, **kwargs):
 
 # Main function
 def main():
-    # File location
     file_location = "student_db.csv"
 
     # Defining the key function for sorting by math.grade
     key_func_math_grade: Callable[[Any], Any] = lambda x: x['math.grade']
 
     # Filtering data
+    #display all rows
     pd.set_option('display.max_rows', None)
     df = data_filtering(file_location)
     selected_columns = df[Column_Selected]
